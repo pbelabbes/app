@@ -1,11 +1,6 @@
+import { Guideline } from '../models/guideline';
 import { getLetterFromDico, Letter } from '../models/letter';
 import { getWordsByLength, Word } from '../models/word';
-
-interface Guideline {
-  letter: Letter;
-  code: string; // _: not in word, X : Good place, O : wrong place
-  position?: number;
-}
 
 export class Solveur {
   availableWords: Word[] = [];
@@ -45,8 +40,13 @@ export class Solveur {
         );
         break;
       case 'O':
-        this.availableWords = this.availableWords.filter((word) =>
-          word.value.includes(guideline.letter.value),
+        if (position === undefined) {
+          throw new Error('A letter in a good place must have a position');
+        }
+        this.availableWords = this.availableWords.filter(
+          (word) =>
+            word.value.includes(guideline.letter.value) &&
+            !(word.value.charAt(position) === guideline.letter.value),
         );
     }
   }
