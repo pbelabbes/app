@@ -1,15 +1,15 @@
 {
-  "name": "node-typescript-jest-boilerplate",
-  "version": "0.0.1",
-  "description": "NodeJS typescript + jest boilerplate",
+  "name": "sutom_solver",
+  "version": "1.0.0",
+  "description": "A simple solver of sutom",
   "keywords": [
-    "boilerplate",
-    "typescript",
-    "jest"
+    "sutom",
+    "solver",
+    "wordle"
   ],
-  "author": "Brian Schlenker <bschlenk@umich.edu>",
+  "author": "Grizzrok <pbelabbes@gmail.com>",
   "license": "MIT",
-  "repository": "bschlenk/node-typescript-jest-boilerplate",
+  "repository": "pbelabbes/sutomSolveur",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
